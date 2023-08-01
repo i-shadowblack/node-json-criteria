@@ -8,7 +8,7 @@ import * as ensure from '../ensure'
 const mongo = new Engine()
 export default mongo
 
-export function test (json, query) {
+export function test(json, query) {
   return mongo.test(json, query)
 }
 
@@ -47,3 +47,5 @@ mongo.append2(require('../rules/where')) // TODO: Is it safe?
 mongo.append2(require('../rules/all'))
 mongo.append2(require('../rules/elem-match'))
 mongo.append2(require('../rules/size'))
+
+mongo.append2(require('../rules/inc'))
